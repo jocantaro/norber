@@ -1,3 +1,13 @@
+norber_films_bundle_content:
+    resource: "@NorberFilmsBundleContentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+norber_films_bundle_admin:
+    resource: "@NorberFilmsBundleAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
