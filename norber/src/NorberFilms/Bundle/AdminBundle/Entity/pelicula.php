@@ -13,6 +13,17 @@ use Doctrine\ORM\Mapping as ORM;
 class pelicula
 {
 
+    /**
+     * @ORM\ManyToOne(targetEntity="genero", inversedBy="pelicula")
+     * @ORM\JoinColumn(name="pelicula_id", referencedColumnName="id")
+     */
+
+    private $genero;
+
+    public function __construct()
+    {
+        $this->genero= new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * @ORM\OneToMany(targetEntity="trabajan_en", mappedBy="pelicula")
